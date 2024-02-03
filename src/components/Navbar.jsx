@@ -1,11 +1,12 @@
+import {navOptions} from './../utils/utils'
+
 export default function Navbar() {
-  const items = ["Início", "Novidades", "Ofertas", "Sobre", "Newsletter"];
   return (
     <nav className="navbar">
       <ul>
-        {items.map((item) => (
-          <li>
-            <button>{item}</button>
+        {navOptions.map((item) => (
+          <li key={item.id}>
+            <button>{item.label}</button>
           </li>
         ))}
       </ul>
